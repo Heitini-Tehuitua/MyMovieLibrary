@@ -1,0 +1,15 @@
+  
+.mml-film-item-cover {
+	height: 27px;
+	width: 133px;
+	border-radius: 20px;
+}
+
+.mml-film-plant-item {
+	margin: 10px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	text-transform: capitalize;
+}

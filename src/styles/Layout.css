@@ -1,0 +1,5 @@
+.mml-layout-inner {
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(49, 46, 46);
+}

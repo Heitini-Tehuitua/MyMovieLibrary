@@ -1,0 +1,41 @@
+.mml-categories {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+}
+  
+.mml-custom-select {
+    text-align: center;
+    appearance: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 100%;
+    font-size: 30px;
+    cursor: grab;
+}
+
+.mml-custom-option{
+    background-color: rgb(49, 46, 46);
+    color: white;
+    text-align: center;
+    appearance: none;
+    
+}
+
+.mml-accueil{
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    margin-right: 20px;
+    cursor: grab;
+}
+.mml-custom-select:focus{
+    outline:none;
+}
+.mml-accueil:focus{
+    outline:none;
+}
+  
