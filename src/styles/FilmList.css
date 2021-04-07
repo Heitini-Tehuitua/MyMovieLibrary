@@ -1,0 +1,34 @@
+  
+.mml-film-list {
+	list-style-type: none;
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+}
+
+.mml-film-item {
+	border: solid 2px black;
+	border-radius: 10px;
+	height: 150px;
+	width: 150px;
+	margin: 10px;
+	color:white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.mml-film-item-detail {
+	border: solid 2px black;
+	border-radius: 10px;
+	height: 400px;
+	width: 400px;
+	margin: 10px;
+	color:white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}

@@ -1,14 +1,14 @@
 import '../styles/Categories.css'
 
-function Categories({ setActiveCategory, categories, activeCategory }) {
+function Categories({ setActiveCategory, categories, activeCategory, setShow}) {
 	return (
 		<div className="mml-categories">
 
-            <button onClick={() => setActiveCategory('')} className="mml-accueil">Accueil</button>
+            <button onClick={() => setActiveCategory('') + setShow(false)} className="mml-accueil">Accueil</button>
 
 			<select
 				value={activeCategory}
-				onChange={(e) => setActiveCategory(e.target.value)}
+				onChange={(e) => setActiveCategory(e.target.value) + setShow(false)}
                 className = "mml-custom-select"
             >
 				<option value='' className="mml-custom-option">Categories</option>

@@ -4,7 +4,7 @@ import { filmList } from '../datas/filmList'
 import Categories from './Categories'
 
 
-function Banner({activeCategory, setActiveCategory}){
+function Banner({activeCategory, setActiveCategory, setShow}){
     const categories = filmList.reduce(
 		(acc, film) =>
 			acc.includes(film.category) ? acc : acc.concat(film.category),
@@ -18,6 +18,7 @@ function Banner({activeCategory, setActiveCategory}){
 				categories={categories}
 				setActiveCategory={setActiveCategory}
 				activeCategory={activeCategory}
+                setShow = {setShow}
 			/>
             <h1> { title } </h1>
         </div>
