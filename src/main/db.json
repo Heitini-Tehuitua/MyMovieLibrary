@@ -1,0 +1,117 @@
+{
+	"movies" : [
+		{
+			"_id" : "1",
+			"title" : "Ironman",
+			"synopsis" : "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+			"releaseDate" : "2008",
+			"genre" : [ "sf" ],
+			"duration" : 120,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg",
+			"trailerLink" : "https://www.youtube.com/watch?v=EcZIzpvRTlU",
+			"directors" : [ "1" ],
+			"writers" : [ ],
+			"actors" : [ { "id" : 1, "role" : "Hogan" }, { "id" : 2, "role" : "Tony Stark" } ]
+		},
+		{
+			"_id" : "2",
+			"title" : "Guardians of the Galaxy",
+			"synopsis" : "A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",
+			"releaseDate" : "2014",
+			"genre" : [ "sf" ],
+			"duration" : 180,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMjA3ODU4MDUyMl5BMl5BanBnXkFtZTgwNTE2OTkzMTE@._V1_.jpg",
+			"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
+			"directors" : [ "1" ],
+			"writers" : [ ],
+			"actors" : [ ]
+		},
+		{
+			"_id" : "3",
+			"title" : "Titanic",
+			"synopsis" : "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+			"releaseDate" : "1997",
+			"genre" : [ "drama", "romance" ],
+			"duration" : 180,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+			"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
+			"directors" : [ "1" ],
+			"writers" : [ ],
+			"actors" : [ ]
+		},
+		{
+			"_id" : "4",
+			"title" : "Aquaman",
+			"synopsis" : "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
+			"releaseDate" : "2018",
+			"genre" : [ "crime", "drama" ],
+			"duration" : 175,
+			"posterLink" : "https://youtu.be/WDkg3h8PCVU",
+			"trailerLink" : "https://youtu.be/sY1S34973zA",
+			"directors" : [ {"id" : "1", "name" : "James Wan"} ],
+			"writers" : [ ],
+			"actors" : [ {"id" : 1, "role" : "Aquaman"} ,{"id" : 2, "role" : "Mera"}]
+		},
+		{
+			"_id" : "5",
+			"title" : "Thor",
+			"synopsis" : "The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders. ",
+			"releaseDate" : "2011",
+			"genre" : [ "action", "adventure", "fantasy" ],
+			"duration" : 151,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
+			"trailerLink" : "https://youtu.be/JOddp-nlNvQ",
+			"directors" : [ {"id" : "1", "name" : "Kenneth Branagh"} ],
+			"writers" : [ ],
+			"actors" : [ {"id" : 1, "role" : "Thor"} ,{"id" : 2, "role" : "Jane Foster"}]
+		}
+	],
+	"peoples" : [
+		{
+			"_id" : "1",
+			"lastname" : "FAVREAU",
+			"firstname" : "Jon",
+			"biography" : "Initially an indie film favorite, actor Jon Favreau has progressed to strong mainstream visibility into the millennium and, after nearly two decades in the business, is still enjoying character stardom as well as earning notice as a writer/producer/director.",
+			"birthDate" : "19870813",
+			"deathDate" : "",
+			"picture" : "https://m.media-amazon.com/images/M/MV5BNjcwNzg4MjktNDNlMC00M2U1LWJmMjgtZTVkMmI4MDI2MTVmXkEyXkFqcGdeQXVyMjI4MDI0NTM@._V1_.jpg"
+		},
+		{
+			"_id" : "2",
+			"lastname" : "Downey Jr.",
+			"firstname" : "Robert",
+			"biography" : "Robert Downey Jr. has evolved into one of the most respected actors in Hollywood. With an amazing list of credits to his name, he has managed to stay new and fresh even after over four decades in the business.",
+			"birthDate" : "19650404",
+			"deathDate" : "",
+			"picture" : "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_.jpg"
+		},
+		{
+			"_id" : "3",
+			"lastname" : "Portman",
+			"firstname" : "Natalie",
+			"biography" : "Born in Israel in 1981, actress Natalie Portman grew up on Long Island, New York, and began modeling at age 11. Her film debut was in The Professional (1994), and she was cast as Queen Amidala in the Star Wars prequels. While continuing her career, Portman earned a degree in psychology from Harvard University.",
+			"birthDate" : "19870906",
+			"deathDate" : "",
+			"picture" : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTc5ODc3MDI5NTIzNDk4NjA3/natalie-portman-attends-the-2015-vanity-fair-oscar-party-hosted-by-graydon-carter-at-wallis-annenberg-center-for-the-performing-arts-on-february-22-2015-in-beverly-hills-california-photo-by-jon-kopalo.jpg"
+		},
+		{
+			"_id" : "4",
+			"lastname" : "Momoa",
+			"firstname" : "Jason",
+			"biography" : "Joseph Jason Namakaeha Momoa (born August 1, 1979)[1] is an American actor. He made his acting debut as Jason Ioane on the syndicated action drama series Baywatch: Hawaii (1999–2001), which was followed by him portraying Ronon Dex on the Syfy science fiction series Stargate Atlantis (2005–2009), Khal Drogo in the first two seasons of the HBO fantasy drama series Game of Thrones (2011–2012), Declan Harp on the Discovery Channel historical drama series Frontier (2016–2018), and Baba Voss on the Apple TV+ science fiction series See (2019–present). Momoa was featured as the lead of the two lattermost series.Outside of television, Momoa has portrayed Arthur Curry / Aquaman in the DC Extended Universe (DCEU) since 2016. He headlined an eponymous 2018 film, with a second entry planned. Momoa will also play Duncan Idaho in the 2021 film adaptation of the science fiction novel Dune. ",
+			"birthDate" : "19790108",
+			"deathDate" : "",
+			"picture" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Jason_Momoa_%2843055621224%29_%28cropped%29.jpg/800px-Jason_Momoa_%2843055621224%29_%28cropped%29.jpg"
+		},
+		{
+			"_id" : "5",
+			"lastname" : "Heard",
+			"firstname" : "Amber",
+			"biography" : "is an American actress. Heard first gained mainstream recognition for supporting roles in the action film Never Back Down (2008) and the stoner comedy Pineapple Express (2008). In the following ten years, she acted mostly in independent films and small-budget productions, such as The Joneses (2009), The Rum Diary (2011), The Danish Girl (2015) and One More Time (2015). She's also known for her roles in horror and thriller films such as All the Boys Love Mandy Lane (2006), John Carpenter's The Ward (2010), Drive Angry (2011), and Machete Kills (2013). ",
+			"birthDate" : "19862204",
+			"deathDate" : "",
+			"picture" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Amber_Heard_%2843723454772%29.jpg/800px-Amber_Heard_%2843723454772%29.jpg"
+		}
+		
+	]
+}
