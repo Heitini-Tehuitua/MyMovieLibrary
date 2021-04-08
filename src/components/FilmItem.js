@@ -1,27 +1,20 @@
 import '../styles/FilmItem.css'
-import NoteScale from './NoteScale'
 
-function handleClick(filmName){
-    console.log(`Nom du film ${filmName} 😀`)
-}
+function FilmItem({currentMovie, selectMovie, UpdateSelectMovie, setShow}){
 
-function FilmItem({id, cover, title, star, titleFilm, UpdateTitle, describe, setShow}) {
-	function showDetail(cover, title, star,describe) {
-		const currentFilm = titleFilm.find((film) => film.title === title)
-		if (!currentFilm) {
-			UpdateTitle([
-				{ cover, title, star ,describe}
-			])
-	
-		}
+	function showDetail(currentMovie) {
+		UpdateSelectMovie(currentMovie)
+		console.log(`Taille Tab ${selectMovie }`)
 	}
-	
-    return (
-		<li key={id} className='mml-film-item' onClick={() => handleClick(title)}>
-			<img className='mml-film-item-cover' src={cover} alt={`${title} cover`} />
-			{title}
-            <NoteScale scaleValue={star} />
-			<button onClick={() => showDetail(cover, title, star,describe) + setShow(true)}>Detail Film</button>
+
+	function handleClick(){
+		console.log(`Taille Tab ${selectMovie} 😀`)
+	}
+	return (
+		<li key={currentMovie._id} className='mml-film-item' onClick={() => handleClick()}>
+			<img className='mml-film-item-cover' src={currentMovie.posterLink} alt={`${currentMovie.title} cover`} />
+			{currentMovie.title}
+			<button onClick={() => UpdateSelectMovie(currentMovie) + setShow(true)}>Detail Film</button>
 		</li>
 	)
 }

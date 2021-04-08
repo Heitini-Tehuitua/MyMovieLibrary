@@ -9,9 +9,17 @@
 			"duration" : 120,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=EcZIzpvRTlU",
-			"directors" : [ "1" ],
-			"writers" : [ ],
-			"actors" : [ { "id" : 1, "role" : "Hogan" }, { "id" : 2, "role" : "Tony Stark" } ]
+			"directors" : [ {"id" : "1", "name" : "Jon Favreau"} ],
+			"writers" : [ { "id" : 1, "name" : "Mark Fergus","role" : "screenplay" }, 
+						{ "id" : 2, "name" : "Hawk Ostby","role" : "screenplay" },
+						{ "id" : 3, "name" : "Stan Lee","role" : "characters" },
+						{ "id" : 3, "name" : "Don Heck","role" : "characters" }
+					],
+			"actors" : [ { "id" : 1, "role" : "Hogan" }, 
+				{ "id" : 2, "role" : "Tony Stark" },
+				{ "id" : 3, "role" : "Rhodey" },
+				{ "id" : 4, "role" : "Pepper Pots" }
+			]
 		},
 		{
 			"_id" : "2",
@@ -22,9 +30,16 @@
 			"duration" : 180,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMjA3ODU4MDUyMl5BMl5BanBnXkFtZTgwNTE2OTkzMTE@._V1_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
-			"directors" : [ "1" ],
-			"writers" : [ ],
-			"actors" : [ ]
+			"directors" : [ {"id" : "1", "name" : "James Gunn"} ],
+			"writers" : [ { "id" : 1, "name" : "James Gunn","role" : "written by" }, 
+						{ "id" : 2, "name" : "Nicole Perlman","role" : "written by" },
+						{ "id" : 3, "name" : "Dan Abnett","role" : "characters" },
+						{ "id" : 3, "name" : "Andy Lanning","role" : "characters" }
+					],
+			"actors" : [ { "id" : 1, "role" : "Peter Quill" }, 
+				{ "id" : 2, "role" : "Gamora" },
+				{ "id" : 3, "role" : "Drax" }
+			]
 		},
 		{
 			"_id" : "3",
@@ -35,9 +50,13 @@
 			"duration" : 180,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
-			"directors" : [ "1" ],
-			"writers" : [ ],
-			"actors" : [ ]
+			"directors" : [ {"id" : "1", "name" : "James Cameron"} ],
+			"writers" : [ { "id" : 1, "name" : "James Cameron","role" : "written by" }
+					],
+			"actors" : [ { "id" : 1, "role" : "Jack Dawson" }, 
+				{ "id" : 2, "role" : "Rose Dewitt Bukater" },
+				{ "id" : 3, "role" : "Cal Hockley" }
+			]
 		},
 		{
 			"_id" : "4",
@@ -46,7 +65,7 @@
 			"releaseDate" : "2018",
 			"genre" : [ "crime", "drama" ],
 			"duration" : 175,
-			"posterLink" : "https://youtu.be/WDkg3h8PCVU",
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_.jpg",
 			"trailerLink" : "https://youtu.be/sY1S34973zA",
 			"directors" : [ {"id" : "1", "name" : "James Wan"} ],
 			"writers" : [ ],

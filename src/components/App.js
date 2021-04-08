@@ -8,14 +8,14 @@ import { useState } from 'react';
 
 function App() {
 
-  const [titleFilm, UpdateTitle] = useState([])
+  
   const [activeCategory, setActiveCategory] = useState("")
   const [activeLogin, setActiveLogin] = useState("")
   const [activePassword, setActivePassword] = useState("")
   const [verifUser, setVerifUser] = useState(false)
   const [ isShow, setShow] = useState(false)
 
-  return verifUser ?(
+  return (
     <div>
       <Banner 
         activeCategory={activeCategory} 
@@ -25,8 +25,6 @@ function App() {
 
       <div className='mml-layout-inner'>
         <FilmList 
-          titleFilm={titleFilm} 
-          UpdateTitle={UpdateTitle} 
           activeCategory={activeCategory} 
           setActiveCategory={setActiveCategory}
           isShow={isShow}
@@ -34,15 +32,19 @@ function App() {
         />
       </div>
     </div>
-  ) : (
-    <Login
-      activeLogin={activeLogin}
-      activePassword={activePassword}
-      setActiveLogin={setActiveLogin}
-      setActivePassword={setActivePassword}
-      setVerifUser={setVerifUser}
-    />
   )
+  // ) : (
+  //   <div>
+
+  //     <Login
+  //       activeLogin={activeLogin}
+  //       activePassword={activePassword}
+  //       setActiveLogin={setActiveLogin}
+  //       setActivePassword={setActivePassword}
+  //       setVerifUser={setVerifUser}
+  //     />
+  //   </div>
+  // )
 };
 
 export default App;

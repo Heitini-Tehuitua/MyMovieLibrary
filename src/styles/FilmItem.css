@@ -1,11 +1,12 @@
   
 .mml-film-item-cover {
-	height: 27px;
-	width: 133px;
+	height: 200;
+	width: 200px;
+	object-fit: contain;
 	border-radius: 20px;
 }
 
-.mml-film-plant-item {
+.mml-film-item {
 	margin: 10px;
 	display: flex;
 	align-items: flex-start;
