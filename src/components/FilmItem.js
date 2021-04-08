@@ -1,21 +1,28 @@
 import '../styles/FilmItem.css'
+import { BrowserRouter as Link} from "react-router-dom";
 
-function FilmItem({currentMovie, selectMovie, UpdateSelectMovie, setShow}){
+function FilmItem({id, cover, title, star, titleFilm, UpdateTitle, describe, setShow,movie}) {
+	// function showDetail(cover, title, star,describe) {
+	// 	const currentFilm = titleFilm.find((film) => film.title === title)
+	// 	if (!currentFilm) {
+	// 		UpdateTitle([
+	// 			{ cover, title, star ,describe}
+	// 		])
+	
+	// 	}
+	// }
+	
+    return (
 
-	function showDetail(currentMovie) {
-		UpdateSelectMovie(currentMovie)
-		console.log(`Taille Tab ${selectMovie }`)
-	}
+		<div className="mml-row-item">
+			<Link to={`/movies?id=${movie._id}`}>
+				<img className="mml-film-item-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
 
-	function handleClick(){
-		console.log(`Taille Tab ${selectMovie} 😀`)
-	}
-	return (
-		<li key={currentMovie._id} className='mml-film-item' onClick={() => handleClick()}>
-			<img className='mml-film-item-cover' src={currentMovie.posterLink} alt={`${currentMovie.title} cover`} />
-			{currentMovie.title}
-			<button onClick={() => UpdateSelectMovie(currentMovie) + setShow(true)}>Detail Film</button>
-		</li>
+				<p><a className="mml-title">{movie.title} </a> ({movie.releaseDate})</p>
+				{/* <button onClick={() => showDetail(cover, title, star,describe) + setShow(true)}>Detail Film</button> */}
+			</Link>
+		
+		</div>
 	)
 }
 

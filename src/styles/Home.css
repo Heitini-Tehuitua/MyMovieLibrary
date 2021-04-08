@@ -1,0 +1,21 @@
+.mml-home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mml-show-container{
+    width:900px;
+    height: 800px;
+    border-radius: 20px;
+    background-color: black;
+    
+}
+
+.mml-movie-show-cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
