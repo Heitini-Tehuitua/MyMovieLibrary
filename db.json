@@ -21,7 +21,7 @@
 		"duration" : 180,
 		"posterLink" : "https://m.media-amazon.com/images/M/MV5BMjA3ODU4MDUyMl5BMl5BanBnXkFtZTgwNTE2OTkzMTE@._V1_.jpg",
 		"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
-		"directors" : [ {"id" : "1"} ],
+		"directors" : [ {"id" : "2"} ],
 		"writers" : [ { "id" : "1","role" : "written by" },{ "id" : "2" ,"role" : "written by" }],
 		"actors" : [ { "id" :"3", "role" : "Peter Quill" }, { "id" : "4", "role" : "Gamora" }]
 	},
