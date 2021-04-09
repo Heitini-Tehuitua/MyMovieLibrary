@@ -9,8 +9,8 @@
 		"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg",
 		"trailerLink" : "https://www.youtube.com/watch?v=EcZIzpvRTlU",
 		"directors" : [ {"id" : "1", "name" : "Jon Favreau"} ],
-		"writers" : [ { "id" : 1,"role" : "screenplay" },{ "id" : 3,"role" : "characters" }],
-		"actors" : [ { "id" : 1, "role" : "Hogan" }, { "id" : 2, "role" : "Tony Stark" }]
+		"writers" : [ { "id" : "1","role" : "screenplay" },{ "id" : "3","role" : "characters" }],
+		"actors" : [ { "id" : "1", "role" : "Hogan" }, { "id" : "2", "role" : "Tony Stark" }]
 	},
 	{
 		"_id" : "2",
@@ -106,7 +106,7 @@
 		"_id" : "5",
 		"lastname" : "DiCaprio",
 		"firstname" : "Leonardo",
-		"biography" : "Few actors in the world have had a career quite as diverse as Leonardo DiCaprio's. DiCaprio has gone from relatively humble beginnings, as a supporting cast member.",
+		"biography" : "Few actorws in the world have had a career quite as diverse as Leonardo DiCaprio's. DiCaprio has gone from relatively humble beginnings, as a supporting cast member.",
 		"birthDate" : "19741111",
 		"deathDate" : "",
 		"picture" : "https://th.bing.com/th/id/OIP.J92S0hFEMYln4siNIed0xQHaOG?w=181&h=345&c=7&o=5&pid=1.7"

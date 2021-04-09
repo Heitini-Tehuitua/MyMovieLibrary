@@ -35,7 +35,7 @@ function FilmList() {
         console.log(`Movies ${movies}...`);
         return (
             <div className="mml-moviesList-container">
-            <h3>Liste des Films</h3>
+            
             { !isLoaded ? ( <div>Chargement...</div> ) : ( 
                 
                 
@@ -46,9 +46,10 @@ function FilmList() {
                                 <img className="mml-movieList-show-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
                         ) : null))}
                     </div>
+                    <h3>Liste des Films</h3>
                     {
                         movies.map(movie => (
-                            <div key={movie._id} className="mml-movielist-container">
+                            <div key={movie._id} className="mml-movielist-movieItem-container">
 
                                 <FilmItem
                                     movie={movie}

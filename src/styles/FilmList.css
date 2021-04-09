@@ -1,5 +1,6 @@
-.mml-movielist-container{
+.mml-movielist-movieItem-container{
 	margin-top: 20px;
+    width: 50vw;
 }
 
 .mml-moviesList-container{
