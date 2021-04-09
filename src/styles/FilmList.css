@@ -1,34 +1,22 @@
-  
-.mml-film-list {
-	list-style-type: none;
-	padding: 32px;
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 800px;
+.mml-movielist-container{
+	margin-top: 20px;
 }
 
-.mml-film-item {
-	border: solid 2px black;
-	border-radius: 10px;
-	height: 200px;
-	width: 200px;
-	margin: 10px;
-	color:white;
+.mml-moviesList-container{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 }
+.mml-movieList-show-container{
+	width: 75vw;
+    height: 65vh;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px black;
+}
 
-.mml-film-item-detail {
-	border: solid 2px black;
-	border-radius: 10px;
-	height: 400px;
-	width: 400px;
-	margin: 10px;
-	color:white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+.mml-movieList-show-cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }

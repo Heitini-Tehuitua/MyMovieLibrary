@@ -1,0 +1,22 @@
+.mml-movie-item-cover {
+    padding: 10px;
+	height: 25vh;
+	width: 15vw;
+	border-radius: 20px;
+    transition: all 0.5s;
+
+}
+
+.mml-movie-item-cover:hover{
+    transform: scale(1.1);
+}
+
+.mml-row-item{
+    margin-top: 40px;
+    padding: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    justify-content: space-around;
+	flex-wrap: wrap;
+}

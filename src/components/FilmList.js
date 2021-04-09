@@ -1,14 +1,12 @@
 import FilmItem from './FilmItem'
 import '../styles/FilmList.css'
 import { React, useState, useEffect } from "react";
-import { BrowserRouter as Link} from "react-router-dom";
 
-function FilmList({activeCategory, isShow, setShow}) {
+function FilmList() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [movies, setMovies] = useState([]);
-    const [selectMovie, UpdateSelectMovie] = useState([]);
-
+    const [selectMovie, setSelectM] = useState("1");
   // Fetching data
     console.log(`Fetching data from ${process.env.REACT_APP_SERVER_API}...`);
     useEffect(() => {
@@ -34,28 +32,31 @@ function FilmList({activeCategory, isShow, setShow}) {
     } else if (!isLoaded) {
         return <div>Chargement...</div>;
     } else {
-
+        console.log(`Movies ${movies}...`);
         return (
-            <div>
+            <div className="mml-moviesList-container">
             <h3>Liste des Films</h3>
             { !isLoaded ? ( <div>Chargement...</div> ) : ( 
-            
+                
+                
                 <div id="movies">
-                {
-                    movies.map(movie => (
-                        <ul id={movie._id}>
+                    <div className="mml-movieList-show-container" id="showContainer">
+                        {movies.map(movie => (
+                            movie._id === selectMovie ?(
+                                <img className="mml-movieList-show-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
+                        ) : null))}
+                    </div>
+                    {
+                        movies.map(movie => (
+                            <div key={movie._id} className="mml-movielist-container">
 
-                        <FilmItem
-                            currentMovie={movie}
-                            selectMovie={selectMovie}
-                            UpdateSelectMovie={UpdateSelectMovie}
-                            setShow={setShow}
-                            movie={movie}
-                        />
-            
-                        </ul>
-                    ))
-                }
+                                <FilmItem
+                                    movie={movie}
+                                />
+                
+                            </div>
+                        ))
+                    }
                 </div>
             )}
             </div>

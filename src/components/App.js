@@ -1,9 +1,6 @@
 import './../styles/App.css';
 import Banner from './Banner';
-import Login from './Login';
-import '../styles/Layout.css'
-import { useState } from 'react';
-import { BrowserRouter as Router,Switch,Link,Route} from "react-router-dom";
+import '../styles/Layout.css';
 
 function App() {
 

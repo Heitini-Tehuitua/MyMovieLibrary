@@ -1,7 +1,7 @@
 import './../styles/Banner.css';
 import logo from '../assets/myflix.png';
-import Categories from './Categories'
 import FilmList from './FilmList';
+import MovieDetails from './MovieDetails';
 import Home from './Home'
 
 import { BrowserRouter as Router,Switch,Link,Route} from "react-router-dom";
@@ -37,13 +37,17 @@ function Banner(){
                     <Route path="/movies">
                         <FilmList />
                     </Route>
+
+                    <Route path="/movieDetails">
+                        <MovieDetails />
+                    </Route>
                     {/* <Route path="/actors">
                         <ActorsList />
                     </Route>
                     <Route path="/actorDetails">
                         <ActorDetails />
-                    </Route>
-                    <Route path="/writers">
+                    </Route> */}
+                    {/* <Route path="/writers">
                         <WritersList />
                     </Route>
                     <Route path="/writerDetails">
@@ -58,13 +62,6 @@ function Banner(){
     )
 }
 
-function Movies() {
-    return (
-        <div>
-        <h2>Films</h2>
-        </div>
-    );
-}
 
 // function Banner({activeCategory, setActiveCategory, setShow}){
 //     const categories = filmList.reduce(

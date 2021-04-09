@@ -1,13 +1,10 @@
+import '../styles/HomeItemList.css'
 import { React, useState, useEffect } from "react";
-import '../styles/Home.css'
-import HomeItemList from './HomeItemList'
 
-function Home() {
+function HomeItemList() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [movies, setMovies] = useState([]);
-    const [selectMovie, UpdateSelectMovie] = useState("4");
-
   // Fetching data
     console.log(`Fetching data from ${process.env.REACT_APP_SERVER_API}...`);
     useEffect(() => {
@@ -24,36 +21,37 @@ function Home() {
             setError(error);
             }
         )
-        console.log("Fetching movies OK !");
     }, [])
 
+    console.log("Fetching movies OK !");
     
     if (error) {
         return <div>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
         return <div>Chargement...</div>;
     } else {
+        console.log(`Movies ${movies}...`);
         return (
-            <div className="mml-home-container">
-                <h2>Home</h2>
-                { !isLoaded ? ( <div>Chargement...</div> ) : ( 
+            <div className="">
+            { !isLoaded ? ( <div>Chargement...</div> ) : ( 
+                
+                
+                <div id="movies-item-list" className="mml-row-item">
+                    {
+                        movies.map(movie => (
+                            <div key={movie._id} className="">
 
-                    <div className="mml-home-show-container" id="showContainer">
-                        {movies.map(movie => (
-                            movie._id === selectMovie ?(
-                                <img className="mml-home-movie-show-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
-                        ) : null))}
-                    </div>
-
-                )
-                }
-
-
-
-                <HomeItemList />
+                                <div  >
+                                    <img className="mml-movie-item-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            )}
             </div>
-        )
-    }
+        )}
 }
 
-export default Home;
+
+export default HomeItemList;

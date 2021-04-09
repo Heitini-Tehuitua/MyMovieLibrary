@@ -1,28 +1,19 @@
 import '../styles/FilmItem.css'
-import { BrowserRouter as Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
-function FilmItem({id, cover, title, star, titleFilm, UpdateTitle, describe, setShow,movie}) {
-	// function showDetail(cover, title, star,describe) {
-	// 	const currentFilm = titleFilm.find((film) => film.title === title)
-	// 	if (!currentFilm) {
-	// 		UpdateTitle([
-	// 			{ cover, title, star ,describe}
-	// 		])
-	
-	// 	}
-	// }
-	
+function FilmItem({movie}) {
     return (
 
-		<div className="mml-row-item">
-			<Link to={`/movies?id=${movie._id}`}>
-				<img className="mml-film-item-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
+		<Link to={`/movieDetails?id=${movie._id}`}>
+			<div className="mml-row-movieItem" >
+				<img className="mml-movieItem-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
 
-				<p><a className="mml-title">{movie.title} </a> ({movie.releaseDate})</p>
-				{/* <button onClick={() => showDetail(cover, title, star,describe) + setShow(true)}>Detail Film</button> */}
-			</Link>
+				<p className="mml-title-movieItem">
+					{movie.title}({movie.releaseDate})
+				</p>
+			</div>
+		</Link>
 		
-		</div>
 	)
 }
 
