@@ -1,8 +1,8 @@
 .mml-movie-item-cover {
-    padding: 10px;
-	height: 25vh;
-	width: 15vw;
-	border-radius: 20px;
+	padding: 40px;
+    object-fit: cover;
+	height: 300px;
+	width: 200px;
     transition: all 0.5s;
 
 }

@@ -15,13 +15,12 @@
 	
 	text-decoration: none;
 	color:white;
-	font-size: 3vh;
+	font-size: min(3vw,3vh);
 	margin-left: 3vw;
 }
 
 .mml-movieItem-cover {
-	height: 
-	100%;
+	height: 100%;
 	width: 40%;
 	border-radius: 20px;
 

@@ -7,14 +7,16 @@
 }
 
 .mml-home-show-container{
-    width: 75vw;
-    height: 65vh;
+    width: 85vw;
+    height: 85vh;
     border-radius: 20px;
     box-shadow: 5px 10px 20px black;
 }
 
 .mml-home-movie-show-cover {
     /* object-fit:none; */
+    object-fit: cover;
+    object-position: top;
     width: 100%;
     height: 100%;
     border-radius: 20px;

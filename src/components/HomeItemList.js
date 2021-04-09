@@ -33,22 +33,22 @@ function HomeItemList() {
         console.log(`Movies ${movies}...`);
         return (
             <div className="">
-            { !isLoaded ? ( <div>Chargement...</div> ) : ( 
-                
-                
-                <div id="movies-item-list" className="mml-row-item">
-                    {
-                        movies.map(movie => (
-                            <div key={movie._id} className="">
+                { !isLoaded ? ( <div>Chargement...</div> ) : ( 
+                    
+                    
+                    <div id="movies-item-list" className="mml-row-item">
+                        {
+                            movies.map(movie => (
+                                <div key={movie._id} className="">
 
-                                <div  >
-                                    <img className="mml-movie-item-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
+                                    <div  >
+                                        <img className="mml-movie-item-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
+                                    </div>
                                 </div>
-                            </div>
-                        ))
-                    }
-                </div>
-            )}
+                            ))
+                        }
+                    </div>
+                )}
             </div>
         )}
 }

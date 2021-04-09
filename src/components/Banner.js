@@ -1,6 +1,8 @@
 import './../styles/Banner.css';
 import logo from '../assets/myflix.png';
 import FilmList from './FilmList';
+import ActorsList from './ActorsList';
+import ActorDetails from './ActorDetails';
 import MovieDetails from './MovieDetails';
 import Home from './Home'
 
@@ -41,12 +43,12 @@ function Banner(){
                     <Route path="/movieDetails">
                         <MovieDetails />
                     </Route>
-                    {/* <Route path="/actors">
+                    <Route path="/actors">
                         <ActorsList />
                     </Route>
                     <Route path="/actorDetails">
                         <ActorDetails />
-                    </Route> */}
+                    </Route>
                     {/* <Route path="/writers">
                         <WritersList />
                     </Route>

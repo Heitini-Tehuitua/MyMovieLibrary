@@ -16,6 +16,8 @@
 }
 
 .mml-movieList-show-cover {
+    object-fit: cover;
+    object-position: top;
     width: 100%;
     height: 100%;
     border-radius: 20px;
