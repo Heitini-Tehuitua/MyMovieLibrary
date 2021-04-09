@@ -22,8 +22,8 @@
 		"posterLink" : "https://m.media-amazon.com/images/M/MV5BMjA3ODU4MDUyMl5BMl5BanBnXkFtZTgwNTE2OTkzMTE@._V1_.jpg",
 		"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
 		"directors" : [ {"id" : "1"} ],
-		"writers" : [ { "id" : 1,"role" : "written by" },{ "id" : 2 ,"role" : "written by" }],
-		"actors" : [ { "id" : 1, "role" : "Peter Quill" }, { "id" : 2, "role" : "Gamora" }]
+		"writers" : [ { "id" : "1","role" : "written by" },{ "id" : "2" ,"role" : "written by" }],
+		"actors" : [ { "id" :"3", "role" : "Peter Quill" }, { "id" : "4", "role" : "Gamora" }]
 	},
 	{
 		"_id" : "3",
@@ -36,7 +36,7 @@
 		"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
 		"directors" : [ {"id" : "1"} ],
 		"writers" : [ { "id" : "1","role" : "written by" }],
-		"actors" : [ { "id" :" 1", "role" : "Jack Dawson" }, { "id" : "2", "role" : "Rose Dewitt Bukater" }]
+		"actors" : [ { "id" :"5", "role" : "Jack Dawson" }, { "id" : "6", "role" : "Rose Dewitt Bukater" }]
 	},
 	{
 		"_id" : "4",
@@ -49,7 +49,7 @@
 		"trailerLink" : "https://youtu.be/sY1S34973zA",
 		"directors" : [ {"id" : "1"} ],
 		"writers" : [{"id" : "1", "role" : "screenplay"}, {"id" : "1", "role" : "story"} ],
-		"actors" : [ {"id" : "1", "role" : "Aquaman"} ,{"id" : 2, "role" : "Mera"}]
+		"actors" : [ {"id" : "7", "role" : "Aquaman"} ,{"id" : "8", "role" : "Mera"}]
 	},
 	{
 		"_id" : "5",
@@ -62,72 +62,7 @@
 		"trailerLink" : "https://youtu.be/JOddp-nlNvQ",
 		"directors" : [ {"id" : "1"} ],
 		"writers" : [{"id" : "1", "role" : "screenplay"}, {"id" : "1", "role" : "story"} ],
-		"actors" : [ {"id" : "1", "role" : "Thor"} ,{"id" : "2", "role" : "Jane Foster"}]
-	},
-	{
-		"_id" : "6",
-		"title" : "Dolittle",
-		"synopsis" : "A physician who can talk to animals embarks on an adventure to find a legendary island with a young apprentice and a crew of strange pets.",
-		"releaseDate" : "2020",
-		"genre" : [ "comedy", "adventure"],
-		"duration" : 121,
-		"posterLink" : " https://th.bing.com/th/id/Ra4f38df903c9fab65b315ebd80d03d22?rik=20DeDmpis2hYsA&riu=http%3a%2f%2ffr.web.img5.acsta.net%2fpictures%2f19%2f12%2f23%2f15%2f16%2f5585346.jpg&ehk=lx%2fLModu0c5NNVA2OkoH6MnDSNd61FLfSW9qtXatXQI%3d&risl=&pid=ImgRaw",
-		"trailerLink" : "https://youtu.be/zjm6rDgKNMY",
-		"directors" : [ {"id" : "1"} ],
-		"writers" : [{"id" : "1", "role" : "screenplay"}, {"id" : "1", "role" : "screenplay"} ],
-		"actors" : [ {"id" : "1", "role" : "Dr. John Dolittle"} ,{"id" : "2", "role" : "Queen Victoria"}]
-	},
-	{
-		"_id" : "7",
-		"title" : "Braven",
-		"synopsis" : "A logger defends his family from a group of dangerous drug runners.",
-		"releaseDate" : "2018",
-		"genre" : [ "action", "thriller"],
-		"duration" : 142,
-		"posterLink" : " https://www.dvdsreleasedates.com/posters/800/B/Braven-2018-movie-poster.jpg",
-		"trailerLink" : " https://youtu.be/hOwIQNA9A8I",
-		"directors" : [ {"id" : "1"} ],
-		"writers" : [{"id" : "1", "role" : "screenplay"}, {"id" : "1", "role" : "story"} ],
-		"actors" : [ {"id" : "1", "role" : "Joe Braven"} ,{"id" : "2", "role" : "Stephanie Braven"}]
-	},
-	{
-		"_id" : "8",
-		"title" : "Fast & Furious 7 ",
-		"synopsis" : "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
-		"releaseDate" : "2015",
-		"genre" : [ "action", "adventure", "thriller"],
-		"duration" : 137,
-		"posterLink" : " https://i.pinimg.com/originals/47/d1/d7/47d1d768567bc2562cd11876ecc721bb.jpg",
-		"trailerLink" : " https://youtu.be/Skpu5HaVkOc",
-		"directors" : [ {"id" : "1"} ],
-		"writers" : [{"id" : "1", "role" : "written by"}, {"id" : "1", "role" : "characters"} ],
-		"actors" : [ {"id" : "1", "role" : "Dominic Toretto"} ,{"id" : "2", "role" : "Brian O'Conner"}]
-	},
-	{
-		"_id" : "9",
-		"title" : "Pawn Shop Chronicles",
-		"synopsis" : "An anthology of stories involving meth addicted white supremacists, a man looking for his kidnapped wife and an Elvis impersonator.",
-		"releaseDate" : "2013",
-		"genre" : [ "action", "comedy", "crime"],
-		"duration" : 137,
-		"posterLink" : " https://th.bing.com/th/id/R04182d497514c03bee3ce456fc25d453?rik=aC7QO360qT3WmQ&riu=http%3a%2f%2fmedia-cache-ak0.pinimg.com%2f736x%2f46%2f03%2fe1%2f4603e163b147f37175e99a995da63eab.jpg&ehk=f7HmJKuF9o4osO0aYzsXosaK8jLG1usO4BpImM3TTT8%3d&risl=&pid=ImgRaw",
-		"trailerLink" : " https://youtu.be/dfg6V4tyfDY",
-		"directors" : [ {"id" : "1"} ],
-		"writers" : [{"id" : "1", "role" : "screenplay"}],
-		"actors" : [ {"id" : "1", "role" : "Raw Dog"} ,{"id" : "2", "role" : "Ricky"}]
-	},
-	{
-		"_id" : "10",
-		"title" : "Line of Descent",
-		"synopsis" : "Three brothers in a Delhi crime family fight over the future of their enterprise. Meanwhile, an undercover police officer attempts to end the family's legacy, and an arms dealer conspires with the brothers.",
-		"releaseDate" : "2019",
-		"genre" : [ "crime", "drama"],
-		"duration" : 108,
-		"posterLink" : " https://m.media-amazon.com/images/M/MV5BM2U4MGViYzYtNTBjNC00MjIyLWE0ZTEtZjc1Mjk4OGE2NGRhXkEyXkFqcGdeQXVyNDE3Njg0MDY@._V1_UX182_CR0,0,182,268_AL_.jpg",
-		"trailerLink" : " https://youtu.be/MulX0UBk-o0",
-		"directors" : [ {"id" : "1"} ],
-		"writers" : [{"id" : "1", "role" : "written by"}],
-		"actors" : [ {"id" : "1", "role" : "Charu "} ,{"id" : "2", "role" : "Rachel"}]
+		"actors" : [ {"id" : "9", "role" : "Thor"} ,{"id" : "10", "role" : "Jane Foster"}]
 	}
 ],
 "peoples" : [
@@ -169,33 +104,24 @@
 	},
 	{
 		"_id" : "5",
-		"lastname" : "Portman",
-		"firstname" : "Natalie",
-		"biography" : "Natalie Portman grew up on Long Island, New York, and began modeling at age 11. Her film debut was in The Professional (1994), and she was cast as Queen Amidala in the Star Wars prequels. While continuing her career, Portman earned a degree in psychology from Harvard University.",
-		"birthDate" : "19870906",
+		"lastname" : "DiCaprio",
+		"firstname" : "Leonardo",
+		"biography" : "Few actors in the world have had a career quite as diverse as Leonardo DiCaprio's. DiCaprio has gone from relatively humble beginnings, as a supporting cast member.",
+		"birthDate" : "19741111",
 		"deathDate" : "",
-		"picture" : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTc5ODc3MDI5NTIzNDk4NjA3/natalie-portman-attends-the-2015-vanity-fair-oscar-party-hosted-by-graydon-carter-at-wallis-annenberg-center-for-the-performing-arts-on-february-22-2015-in-beverly-hills-california-photo-by-jon-kopalo.jpg"
+		"picture" : "https://th.bing.com/th/id/OIP.J92S0hFEMYln4siNIed0xQHaOG?w=181&h=345&c=7&o=5&pid=1.7"
 	},
 	{
-		"_id" : "3",
-		"lastname" : "Portman",
-		"firstname" : "Natalie",
-		"biography" : "Natalie Portman grew up on Long Island, New York, and began modeling at age 11. Her film debut was in The Professional (1994), and she was cast as Queen Amidala in the Star Wars prequels. While continuing her career, Portman earned a degree in psychology from Harvard University.",
-		"birthDate" : "19870906",
+		"_id" : "6",
+		"lastname" : "Winslet",
+		"firstname" : "Kate",
+		"biography" : "Ask Kate Winslet what she likes about any of her characters, and the word 'ballsy' is bound to pop up at least once.",
+		"birthDate" : "19750510",
 		"deathDate" : "",
-		"picture" : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTc5ODc3MDI5NTIzNDk4NjA3/natalie-portman-attends-the-2015-vanity-fair-oscar-party-hosted-by-graydon-carter-at-wallis-annenberg-center-for-the-performing-arts-on-february-22-2015-in-beverly-hills-california-photo-by-jon-kopalo.jpg"
+		"picture" : "https://th.bing.com/th/id/OIP.HdkuQTpEiiQU5bsurZohiQAAAA?pid=ImgDet&rs=1"
 	},
-	{
-		"_id" : "3",
-		"lastname" : "Portman",
-		"firstname" : "Natalie",
-		"biography" : "Natalie Portman grew up on Long Island, New York, and began modeling at age 11. Her film debut was in The Professional (1994), and she was cast as Queen Amidala in the Star Wars prequels. While continuing her career, Portman earned a degree in psychology from Harvard University.",
-		"birthDate" : "19870906",
-		"deathDate" : "",
-		"picture" : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTc5ODc3MDI5NTIzNDk4NjA3/natalie-portman-attends-the-2015-vanity-fair-oscar-party-hosted-by-graydon-carter-at-wallis-annenberg-center-for-the-performing-arts-on-february-22-2015-in-beverly-hills-california-photo-by-jon-kopalo.jpg"
-	},
-	{
-		"_id" : "4",
+    {
+		"_id" : "7",
 		"lastname" : "Momoa",
 		"firstname" : "Jason",
 		"biography" : "Joseph Jason Namakaeha Momoa is an American actor.He headlined an eponymous 2018 film, with a second entry planned.",
@@ -204,12 +130,30 @@
 		"picture" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Jason_Momoa_%2843055621224%29_%28cropped%29.jpg/800px-Jason_Momoa_%2843055621224%29_%28cropped%29.jpg"
 	},
 	{
-		"_id" : "5",
+		"_id" : "8",
 		"lastname" : "Heard",
 		"firstname" : "Amber",
 		"biography" : "is an American actress. Heard first gained mainstream recognition for supporting roles in the action film Never Back Down (2008).",
 		"birthDate" : "19862204",
 		"deathDate" : "",
-		"picture" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Amber_Heard_%2843723454772%29.jpg/800px-Amber_Heard_%2843723454772%29.jpg"
+		"picture" : "https://th.bing.com/th/id/OIP.qGy_vlLPOHmt_a68TO4GpAHaOG?pid=ImgDet&rs=1"
+	},
+    {
+		"_id" : "9",
+		"lastname" : "Hemsworth",
+		"firstname" : "Chris",
+		"biography" : "Christopher Hemsworth was born in Melbourne, Australia to Leonie Hemsworth (née van Os), an English teacher & Craig Hemsworth, a social-services counselor.",
+		"birthDate" : "19831108",
+		"deathDate" : "",
+		"picture" : "https://images-na.ssl-images-amazon.com/images/M/MV5BOTU2MTI0NTIyNV5BMl5BanBnXkFtZTcwMTA4Nzc3OA@@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
+	},
+	{
+		"_id" : "10",
+		"lastname" : "Portman",
+		"firstname" : "Natalie",
+		"biography" : "Natalie Portman grew up on Long Island, New York, and began modeling at age 11. Her film debut was in The Professional (1994), and she was cast as Queen Amidala in the Star Wars prequels. While continuing her career, Portman earned a degree in psychology from Harvard University.",
+		"birthDate" : "19870906",
+		"deathDate" : "",
+		"picture" : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTc5ODc3MDI5NTIzNDk4NjA3/natalie-portman-attends-the-2015-vanity-fair-oscar-party-hosted-by-graydon-carter-at-wallis-annenberg-center-for-the-performing-arts-on-february-22-2015-in-beverly-hills-california-photo-by-jon-kopalo.jpg"
 	}
 ]}
