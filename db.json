@@ -33,7 +33,7 @@
 		"genre" : [ "drama", "romance" ],
 		"duration" : 194,
 		"posterLink" : "https://www.wonderingblog.in/wp-content/uploads/2020/09/Titanic_1-698x1024.jpg",
-		"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
+		"trailerLink" : "https://youtu.be/jUm88F3MEbQ",
 		"directors" : [ {"id" : "1"} ],
 		"writers" : [ { "id" : "1","role" : "written by" }],
 		"actors" : [ { "id" :"5", "role" : "Jack Dawson" }, { "id" : "6", "role" : "Rose Dewitt Bukater" }]
@@ -46,7 +46,7 @@
 		"genre" : [ "crime", "drama" ],
 		"duration" : 175,
 		"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_.jpg",
-		"trailerLink" : "https://youtu.be/sY1S34973zA",
+		"trailerLink" : "https://youtu.be/WDkg3h8PCVU",
 		"directors" : [ {"id" : "1"} ],
 		"writers" : [{"id" : "1", "role" : "screenplay"}, {"id" : "1", "role" : "story"} ],
 		"actors" : [ {"id" : "7", "role" : "Aquaman"} ,{"id" : "8", "role" : "Mera"}]
@@ -71,7 +71,7 @@
 		"lastname" : "FAVREAU",
 		"firstname" : "Jon",
 		"biography" : "Jon Favreau has progressed to strong mainstream visibility into the millennium and, after nearly two decades in the business, is still enjoying character stardom as well as earning notice as a writer/producer/director.",
-		"birthDate" : "19870813",
+		"birthDate" : "19661019",
 		"deathDate" : "",
 		"picture" : "https://m.media-amazon.com/images/M/MV5BNjcwNzg4MjktNDNlMC00M2U1LWJmMjgtZTVkMmI4MDI2MTVmXkEyXkFqcGdeQXVyMjI4MDI0NTM@._V1_.jpg"
 	},
@@ -89,7 +89,7 @@
 		"lastname" : "Pratt",
 		"firstname" : "Chris",
 		"biography" : "Christopher Michael Pratt is an American film and television actor.",
-		"birthDate" : "19792106",
+		"birthDate" : "19790621",
 		"deathDate" : "",
 		"picture" : "https://i.pinimg.com/originals/03/d9/d2/03d9d2723c64088c914041d57243eb4e.jpg"
 	},
@@ -98,7 +98,7 @@
 		"lastname" : "Zaldana",
 		"firstname" : "Zoe",
 		"biography" : "Zoe Saldana was born on June 19, 1978 in Passaic, New Jersey, to Asalia Nazario and Aridio Saldaña. Her father was Dominican and her mother is Puerto Rican.",
-		"birthDate" : "19781906",
+		"birthDate" : "19780619",
 		"deathDate" : "",
 		"picture" : "https://th.bing.com/th/id/OIP.6gVs82Nqgb_zQGCnZN3bIAHaLI?pid=ImgDet&rs=1"
 	},
@@ -116,7 +116,7 @@
 		"lastname" : "Winslet",
 		"firstname" : "Kate",
 		"biography" : "Ask Kate Winslet what she likes about any of her characters, and the word 'ballsy' is bound to pop up at least once.",
-		"birthDate" : "19750510",
+		"birthDate" : "19751005",
 		"deathDate" : "",
 		"picture" : "https://th.bing.com/th/id/OIP.HdkuQTpEiiQU5bsurZohiQAAAA?pid=ImgDet&rs=1"
 	},
@@ -125,7 +125,7 @@
 		"lastname" : "Momoa",
 		"firstname" : "Jason",
 		"biography" : "Joseph Jason Namakaeha Momoa is an American actor.He headlined an eponymous 2018 film, with a second entry planned.",
-		"birthDate" : "19790108",
+		"birthDate" : "19790801",
 		"deathDate" : "",
 		"picture" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Jason_Momoa_%2843055621224%29_%28cropped%29.jpg/800px-Jason_Momoa_%2843055621224%29_%28cropped%29.jpg"
 	},
@@ -134,7 +134,7 @@
 		"lastname" : "Heard",
 		"firstname" : "Amber",
 		"biography" : "is an American actress. Heard first gained mainstream recognition for supporting roles in the action film Never Back Down (2008).",
-		"birthDate" : "19862204",
+		"birthDate" : "19860422",
 		"deathDate" : "",
 		"picture" : "https://th.bing.com/th/id/OIP.qGy_vlLPOHmt_a68TO4GpAHaOG?pid=ImgDet&rs=1"
 	},
@@ -143,7 +143,7 @@
 		"lastname" : "Hemsworth",
 		"firstname" : "Chris",
 		"biography" : "Christopher Hemsworth was born in Melbourne, Australia to Leonie Hemsworth (née van Os), an English teacher & Craig Hemsworth, a social-services counselor.",
-		"birthDate" : "19831108",
+		"birthDate" : "19830811",
 		"deathDate" : "",
 		"picture" : "https://images-na.ssl-images-amazon.com/images/M/MV5BOTU2MTI0NTIyNV5BMl5BanBnXkFtZTcwMTA4Nzc3OA@@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
 	},
@@ -152,7 +152,7 @@
 		"lastname" : "Portman",
 		"firstname" : "Natalie",
 		"biography" : "Natalie Portman grew up on Long Island, New York, and began modeling at age 11. Her film debut was in The Professional (1994), and she was cast as Queen Amidala in the Star Wars prequels. While continuing her career, Portman earned a degree in psychology from Harvard University.",
-		"birthDate" : "19870906",
+		"birthDate" : "19810609",
 		"deathDate" : "",
 		"picture" : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTc5ODc3MDI5NTIzNDk4NjA3/natalie-portman-attends-the-2015-vanity-fair-oscar-party-hosted-by-graydon-carter-at-wallis-annenberg-center-for-the-performing-arts-on-february-22-2015-in-beverly-hills-california-photo-by-jon-kopalo.jpg"
 	}

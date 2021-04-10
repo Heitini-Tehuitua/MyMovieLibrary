@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import {useLocation} from "react-router-dom";
-import '../styles/MovieDetails.css'
+import '../styles/ActorDetails.css'
 
 function ActorDetails() {
   const [error, setError] = useState(null);
@@ -40,16 +40,15 @@ function ActorDetails() {
       return (
         <div >
           { !isLoaded ? ( <div>Chargement...</div> ) : ( 
-                
-            <div id="actors" className="mml-detailMovie-container">
-                <div className="mml-detailMovie-show-container" id="showContainer">
-                    <img className="mml-detailMovie-show-cover" src={actor.picture} alt={`${actor.lastname} ${actor.firstname} cover`} />
-                </div>
-                <ul>
-                  <li className="mml-title">
-                    {actor.lastname} ({actor.firstnamee})
-                  </li>
-                </ul>
+            <div className="mml-actorDetails-row-container">
+              <img className="mml-actorDetails-show-cover" src={actor.picture} alt={`${actor.lastname} ${actor.firstname} cover`} />
+              <div className="mml-actorDetails-container">
+                <span className="mml-actorDetails-link-title">
+                  {`${actor.firstname} ${actor.lastname}`} 
+                </span>
+                <p>Born : {actor.birthDate}</p>
+                <p>Biography: {actor.biography}</p>
+              </div>
             </div>
             )}
         </div>

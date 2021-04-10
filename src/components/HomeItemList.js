@@ -1,5 +1,6 @@
 import '../styles/HomeItemList.css'
 import { React, useState, useEffect } from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 function HomeItemList() {
     const [error, setError] = useState(null);
@@ -39,12 +40,14 @@ function HomeItemList() {
                     <div id="movies-item-list" className="mml-row-item">
                         {
                             movies.map(movie => (
-                                <div key={movie._id} className="">
+                                <Link to={`/movieDetails?id=${movie._id}`}>
+                                    <div key={movie._id} className="">
 
-                                    <div  >
-                                        <img className="mml-movie-item-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
+                                        <div  >
+                                            <img className="mml-movie-item-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))
                         }
                     </div>

@@ -1,0 +1,36 @@
+.mml-actorDetails-row-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 5px 10px 20px black;
+    background-color: rgb(61, 49, 49);
+}
+
+.mml-actorDetails-show-cover{
+    object-fit:cover;
+    width: 300px;
+    height: 500px;
+}
+.mml-actorDetails-container{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: 30px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.mml-actorDetails-link-title{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.mml-actorDetails-link{
+    font-size: 12px;
+}

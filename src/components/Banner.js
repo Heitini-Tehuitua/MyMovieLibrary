@@ -5,6 +5,7 @@ import ActorsList from './ActorsList';
 import ActorDetails from './ActorDetails';
 import MovieDetails from './MovieDetails';
 import Home from './Home'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router,Switch,Link,Route} from "react-router-dom";
 
@@ -13,21 +14,21 @@ function Banner(){
     return(
         <Router>
             <div>
-                <nav>
+                <nav >
                     <ul className="mml-banner">
-                        <li className="mml-link-choice">
+                        <li className="mml-banner-link-choice">
                             <img src = {logo} alt='My Movie Library' className = "mml-logo" />
                         </li>
-                        <li className="mml-link-choice">
+                        <li className="mml-banner-link-choice">
                             <Link to="/">Accueil</Link>
                         </li>
-                        <li className="mml-link-choice">
+                        <li className="mml-banner-link-choice">
                             <Link to="/movies">Films</Link>
                         </li>
-                        <li className="mml-link-choice">
+                        <li className="mml-banner-link-choice">
                             <Link to="/actors">Acteurs</Link>
                         </li>
-                        <li className="mml-link-choice">
+                        <li className="mml-banner-link-choice">
                             <Link to="/writers">Scénaristes</Link>
                         </li>
                     </ul>

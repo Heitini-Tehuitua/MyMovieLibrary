@@ -17,6 +17,7 @@
 	color:white;
 	font-size: min(3vw,3vh);
 	margin-left: 3vw;
+	overflow: hidden;
 }
 
 .mml-movieItem-cover {

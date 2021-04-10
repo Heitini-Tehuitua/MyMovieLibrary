@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import {useLocation} from "react-router-dom";
 import '../styles/MovieDetails.css'
 import {Link} from "react-router-dom";
+import Trailer from './Trailer'
 
 function MovieDetails() {
   const [error, setError] = useState(null);
@@ -59,23 +60,29 @@ function MovieDetails() {
                   <div className="mml-detailMovie-show-container" id="showContainer">
                       <img className="mml-detailMovie-show-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
                   </div>
-                  <div className="mml-movieDetails-container">
-                    <span className="mml-movieDetails-link-title">
-                      {movie.title} ({movie.releaseDate})
-                    </span>
-                    <span className="mml-movieDetails-link" key={`${movie.id}`}>
-                      {`duration : ${movie.duration}min`}
-                      <p>genre : 
-                        {movie.genre && movie.genre.length > 1? (
-                            movie.genre && movie.genre.map(genre => 
-                                " | " + genre.toUpperCase()
-                            )
-                          ) : movie.genre}
-                        </p>
-                      </span>
-                        
-                    <span className="mml-movieDetails-link-synopsis"><p>{movie.synopsis}</p></span>
+
+                  <div className="mml-movieDetails-trailer">
+                    <Trailer  trailerLink = {movie.trailerLink}/>
                   </div>
+                  
+              </div>
+
+              <div className="mml-movieDetails-container">
+                <span className="mml-movieDetails-link-title">
+                  {movie.title} ({movie.releaseDate})
+                </span>
+                <span className="mml-movieDetails-link" key={`${movie.id}`}>
+                  {`Duration : ${movie.duration}min`}
+                  <p>Genres : 
+                    {movie.genre && movie.genre.length > 1? (
+                        movie.genre && movie.genre.map(genre => 
+                            " | " + genre.toUpperCase()
+                        )
+                      ) : " "+ movie.genre}
+                    </p>
+                  </span>
+                    
+                <span className="mml-movieDetails-link-synopsis"><p>{movie.synopsis}</p></span>
               </div>
 
               <h2>List of Actors</h2>

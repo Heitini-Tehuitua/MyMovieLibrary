@@ -11,13 +11,23 @@
     box-shadow: 5px 10px 5px black;
 }
 
-.mml-link-choice{
+.mml-banner-link-choice{
+    margin-left: 50px;
     list-style: none;
     text-align: center;
     font-size: 30px;
+    text-decoration: none;
+}
+
+.mml-banner-navbar{
+    width: 80%;
 }
 
 .mml-logo{
     height: 27px;
 	width: 133px;
+}
+
+a{
+    text-decoration: none;
 }
