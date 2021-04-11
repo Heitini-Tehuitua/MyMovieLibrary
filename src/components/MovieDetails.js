@@ -1,13 +1,23 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import '../styles/MovieDetails.css'
-import {Link} from "react-router-dom";
 import Trailer from './Trailer'
-import Chargement from './Chargement'
 
-function MovieDetails() {
+function MovieDetails({data}) {
+  var query = new URLSearchParams(useLocation().search);
+  var currentMovie;
+  let movieID = query.get("id");
 
+  const movies = data[0];
+  const peoples = data[1];
+  
+  movies.map(movie =>
+    {if(movie._id === movieID){  
+      return currentMovie = movie;
+    }else{
+      return null;
+    }
+  });
+  
   function time_convert(num)
   { 
     var hours = Math.floor(num / 60);  
@@ -40,112 +50,60 @@ function MovieDetails() {
         )
       }
   }
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isLoaded2, setIsLoaded2] = useState(false);
-  const [movie, setMovie] = useState([]);
-  const [peoples, setPeoples] = useState([]);
-  let query = new URLSearchParams(useLocation().search);
-  useEffect(() => {
-    let movieID = query.get("id");
-
-    console.log('Query : ', query);
-    console.log(`Movie ID : ${movieID}`);
-    console.log(`Fetching actor details from ${process.env.REACT_APP_SERVER_API}...`);
-
-    fetch(process.env.REACT_APP_SERVER_API + `/movies?_id=${movieID}`)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          console.log("Result : ", result);
-          setMovie(result[0]);
-          setIsLoaded(true);
-        },
-        (error) => {
-          setError(error);
-          setIsLoaded(true);
-        }
-      )
-    
-    fetch(process.env.REACT_APP_SERVER_API + `/peoples`)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          setPeoples(result);
-          setIsLoaded2(true);
-        },
-        (error) => {
-          setError(error);
-          setIsLoaded2(true);
-        }
-      )
-      console.log("Fetching movie details OK !");
-  }, [])
-  console.log("Movie" , peoples);
-    if (error) {
-        return <div>Erreur : {error.message}</div>;
-    } else if (!isLoaded && !isLoaded2) {
-        return (
-          <div className="mml-home-loading-container">
-              <Chargement />
-          </div>
-      )
-    } else {
-      return (
-        <div >
-            <div>
-              <div id="movies" className="mml-detailMovie-container">
-                  <div className="mml-detailMovie-show-container" id="showContainer">
-                      <img className="mml-detailMovie-show-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
-                  </div>
-
-                  <div className="mml-movieDetails-trailer">
-                    <Trailer  trailerLink = {movie.trailerLink}/>
-                  </div>
-                  
+  return (
+    <div >
+        <div>
+          <div className="mml-detailMovie-container">
+              <div className="mml-detailMovie-show-container" id="showContainer">
+                  <img  key ={`${currentMovie._id}`} className="mml-detailMovie-show-cover" src={currentMovie.posterLink} alt={`${currentMovie.title} cover`} />
               </div>
 
-              <div className="mml-movieDetails-container">
-                <span className="mml-movieDetails-link-title">
-                  {movie.title} ({movie.releaseDate})
-                </span>
-                <span className="mml-movieDetails-link" key={`${movie.id}`}>
-                  {`Duration : ${time_convert(movie.duration)}`}
-                  <p>Genres : 
-                    {movie.genre && movie.genre.length > 1? (
-                        movie.genre && movie.genre.map(genre => 
-                            " | " + formGenre(`${genre}`)
-                        )
-                      ) : " "+ formGenre(`${movie.genre}`)}
-                    </p>
-                  </span>
-                    
-                <span className="mml-movieDetails-link-synopsis"><p>{movie.synopsis}</p></span>
+              <div className="mml-movieDetails-trailer">
+                <Trailer  trailerLink = {currentMovie.trailerLink}/>
               </div>
-
-              <h2>List of Actors</h2>
               
-              <div className="mml-movieDetails-row-item">
-                {movie.actors && movie.actors.map(actorM =>
-                    (
-                      peoples.map(actorP =>(
-                          (actorM.id === actorP._id)?(
-                          <Link to={`/actorDetails?id=${actorP._id}`}>
-                            <div key={actorP._id} className="mml-movieDetails-container-badge">
-                                <div >
-                                    <img className="mml-movieDetails-item-cover" src={actorP.picture} alt={`${actorP.lastname}  ${actorP.lastname} cover`} />
-                                </div>
-                                <span>{actorP.firstname} {actorP.lastname}</span>
-                            </div>
-                          </Link>):null
-                      ))
+          </div>
+
+          <div className="mml-movieDetails-container">
+            <span className="mml-movieDetails-link-title">
+              {currentMovie.title} ({currentMovie.releaseDate})
+            </span>
+            <span className="mml-movieDetails-link" key={`${currentMovie.id}`}>
+              {`Duration : ${time_convert(currentMovie.duration)}`}
+              <p>Genres : 
+                {currentMovie.genre && currentMovie.genre.length > 1? (
+                    currentMovie.genre && currentMovie.genre.map(genre => 
+                        " | " + formGenre(`${genre}`)
                     )
-                )}
-              </div>
-            </div> 
-        </div>
-      );
-  }
+                  ) : " "+ formGenre(`${currentMovie.genre}`)}
+                </p>
+              </span>
+                
+            <span className="mml-movieDetails-link-synopsis"><p>{currentMovie.synopsis}</p></span>
+          </div>
+
+          <h2>List of Actors</h2>
+          
+          <div className="mml-movieDetails-row-item">
+            {currentMovie.actors.map(actorM =>
+                (
+                  peoples.map(actorP =>(
+                      (actorM.id === actorP._id)?(
+                      <Link to={`/actorDetails?id=${actorP._id}`} key={`${actorP._id}-actorID`}>
+                        <div key={actorP._id} className="mml-movieDetails-container-badge">
+                            <div >
+                                <img className="mml-movieDetails-item-cover" src={actorP.picture} alt={`${actorP.lastname}  ${actorP.lastname} cover`} />
+                            </div>
+                            <span>{actorP.firstname} {actorP.lastname}</span>
+                        </div>
+                      </Link>):null
+                  ))
+                )
+            )}
+          </div>
+        </div> 
+    </div>
+  );
 }
 
 export default MovieDetails;

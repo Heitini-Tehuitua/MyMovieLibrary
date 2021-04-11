@@ -1,12 +1,12 @@
 import './../styles/App.css';
-import Banner from './Banner';
 import '../styles/Layout.css';
+import GetData from './GetData';
 
 function App() {
 
   return (
     <div className="App">
-      < Banner />
+      <GetData />
     </div>
   )
 }

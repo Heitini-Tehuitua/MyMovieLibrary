@@ -10,7 +10,9 @@ function Trailer({trailerLink}) {
         playerVars: {
           // https://developers.google.com/youtube/player_parameters
           autoplay: 1
-        }
+          
+        },
+        origin: 'http://localhost:3000' 
     }
 
     function _onReady(event) {

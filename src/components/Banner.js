@@ -9,26 +9,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router,Switch,Link,Route} from "react-router-dom";
 
-function Banner(){
-
+function Banner({data}){
     return(
         <Router>
             <div>
                 <nav >
                     <ul className="mml-banner">
-                        <li className="mml-banner-link-choice">
+                        <li key="mml-logo-picture"className="mml-banner-link-choice">
                             <img src = {logo} alt='My Movie Library' className = "mml-logo" />
                         </li>
-                        <li className="mml-banner-link-choice">
+                        <li  key="mml-accueil-link" className="mml-banner-link-choice">
                             <Link to="/">Accueil</Link>
                         </li>
-                        <li className="mml-banner-link-choice">
+                        <li  key="mml-movies-link" className="mml-banner-link-choice">
                             <Link to="/movies">Films</Link>
                         </li>
-                        <li className="mml-banner-link-choice">
+                        <li key="mml-actors-link" className="mml-banner-link-choice">
                             <Link to="/actors">Acteurs</Link>
                         </li>
-                        <li className="mml-banner-link-choice">
+                        <li key="mml-writers-link" className="mml-banner-link-choice">
                             <Link to="/writers">Scénaristes</Link>
                         </li>
                     </ul>
@@ -38,17 +37,17 @@ function Banner(){
                     renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/movies">
-                        <FilmList />
+                        <FilmList data = {data}/>
                     </Route>
 
                     <Route path="/movieDetails">
-                        <MovieDetails />
+                        <MovieDetails data ={data} />
                     </Route>
                     <Route path="/actors">
-                        <ActorsList />
+                        <ActorsList data = {data}/>
                     </Route>
                     <Route path="/actorDetails">
-                        <ActorDetails />
+                        <ActorDetails data = {data}/>
                     </Route>
                     {/* <Route path="/writers">
                         <WritersList />
@@ -57,7 +56,7 @@ function Banner(){
                         <WriterDetails />
                     </Route> */}
                     <Route path="/">
-                        <Home />
+                        <Home data={data}/>
                     </Route>
                 </Switch>
             </div>
