@@ -6,6 +6,13 @@
     
 }
 
+.mml-home-loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .mml-home-show-container{
     width: 85vw;
     height: 85vh;

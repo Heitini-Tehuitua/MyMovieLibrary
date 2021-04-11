@@ -1,13 +1,20 @@
 import '../styles/ActorsList.css'
 import { React, useState, useEffect } from "react";
 import {Link} from "react-router-dom";
+import Chargement from './Chargement'
 
 function ActorsList() {
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max) + 1;
+    }
+
+    const randomShow = getRandomInt(5);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
+    const [isLoaded2, setIsLoaded2] = useState(false);
     const [movies, setMovies] = useState([]);
     const [actors, setActors] = useState([]);
-    const [selectMovie, setSelectM] = useState("1");
   // Fetching data
     console.log(`Fetching data from ${process.env.REACT_APP_SERVER_API}...`);
     useEffect(() => {
@@ -30,11 +37,11 @@ function ActorsList() {
         .then(
             (result) => {
             console.log("Result : ", result);
-            setIsLoaded(true);
+            setIsLoaded2(true);
             setActors(result);
             },
             (error) => {
-            setIsLoaded(true);
+            setIsLoaded2(true);
             setError(error);
             }
         )
@@ -45,20 +52,20 @@ function ActorsList() {
     
     if (error) {
         return <div>Erreur : {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Chargement...</div>;
+    } else if (!isLoaded && !isLoaded2) {
+        return (
+            <div className="mml-home-loading-container">
+                <Chargement />
+            </div>
+        )
     } else {
         console.log(`Actors ${movies}...`);
         return (
             <div className="mml-moviesList-container">
-            
-            { !isLoaded ? ( <div>Chargement...</div> ) : ( 
-                
-                
                 <div id="actors" className="mml-actorsList-container">
                     <div className="mml-actorsList-show-container" id="showContainer">
                         {movies.map(movie => (
-                            movie._id === selectMovie ?(
+                            movie._id === `${randomShow}` ?(
                                 <img className="mml-actorsList-show-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
                         ) : null))}
                     </div>
@@ -78,7 +85,6 @@ function ActorsList() {
                         </div>
                     }
                 </div>
-            )}
             </div>
         )}
 }

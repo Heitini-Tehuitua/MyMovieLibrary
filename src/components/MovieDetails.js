@@ -4,6 +4,7 @@ import {useLocation} from "react-router-dom";
 import '../styles/MovieDetails.css'
 import {Link} from "react-router-dom";
 import Trailer from './Trailer'
+import Chargement from './Chargement'
 
 function MovieDetails() {
   const [error, setError] = useState(null);
@@ -51,7 +52,11 @@ function MovieDetails() {
     if (error) {
         return <div>Erreur : {error.message}</div>;
     } else if (!isLoaded && !isLoaded2) {
-        return <div>Chargement...</div>;
+        return (
+          <div className="mml-home-loading-container">
+              <Chargement />
+          </div>
+      )
     } else {
       return (
         <div >

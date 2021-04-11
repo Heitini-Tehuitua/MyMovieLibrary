@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import {useLocation} from "react-router-dom";
 import '../styles/ActorDetails.css'
+import Chargement from './Chargement'
 
 function ActorDetails() {
   const [error, setError] = useState(null);
@@ -34,23 +35,25 @@ function ActorDetails() {
     if (error) {
         return <div>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
-        return <div>Chargement...</div>;
+        return (
+          <div className="mml-home-loading-container">
+              <Chargement />
+          </div>
+      )
     } else {
         console.log("Actor :" , actor)
       return (
         <div >
-          { !isLoaded ? ( <div>Chargement...</div> ) : ( 
-            <div className="mml-actorDetails-row-container">
-              <img className="mml-actorDetails-show-cover" src={actor.picture} alt={`${actor.lastname} ${actor.firstname} cover`} />
-              <div className="mml-actorDetails-container">
-                <span className="mml-actorDetails-link-title">
-                  {`${actor.firstname} ${actor.lastname}`} 
-                </span>
-                <p>Born : {actor.birthDate}</p>
-                <p>Biography: {actor.biography}</p>
-              </div>
+          <div className="mml-actorDetails-row-container">
+            <img className="mml-actorDetails-show-cover" src={actor.picture} alt={`${actor.lastname} ${actor.firstname} cover`} />
+            <div className="mml-actorDetails-container">
+              <span className="mml-actorDetails-link-title">
+                {`${actor.firstname} ${actor.lastname}`} 
+              </span>
+              <p>Born : {actor.birthDate}</p>
+              <p>Biography: {actor.biography}</p>
             </div>
-            )}
+          </div>
         </div>
       );
   }

@@ -1,12 +1,18 @@
 import FilmItem from './FilmItem'
+import Chargement from './Chargement'
 import '../styles/FilmList.css'
 import { React, useState, useEffect } from "react";
 
 function FilmList() {
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max) + 1;
+    }
+
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [movies, setMovies] = useState([]);
-    const [selectMovie, setSelectM] = useState("1");
+    
+    const randomShow = getRandomInt(5);
   // Fetching data
     console.log(`Fetching data from ${process.env.REACT_APP_SERVER_API}...`);
     useEffect(() => {
@@ -30,19 +36,19 @@ function FilmList() {
     if (error) {
         return <div>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
-        return <div>Chargement...</div>;
+        return (
+            <div className="mml-home-loading-container">
+                <Chargement />
+            </div>
+        )
     } else {
         console.log(`Movies ${movies}...`);
         return (
             <div className="mml-moviesList-container">
-            
-            { !isLoaded ? ( <div>Chargement...</div> ) : ( 
-                
-                
                 <div id="movies">
                     <div className="mml-movieList-show-container" id="showContainer">
                         {movies.map(movie => (
-                            movie._id === selectMovie ?(
+                            movie._id === `${randomShow}` ?(
                                 <img className="mml-movieList-show-cover" src={movie.posterLink} alt={`${movie.title} cover`} />
                         ) : null))}
                     </div>
@@ -59,7 +65,6 @@ function FilmList() {
                         ))
                     }
                 </div>
-            )}
             </div>
         )}
 }

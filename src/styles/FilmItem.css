@@ -9,6 +9,11 @@
 	border-radius: 20px;
 	border:2px solid black;
 	box-shadow: 5px 10px 5px black;
+	transition: all 0.5s;
+}
+
+.mml-row-movieItem:hover{
+    transform: scale(1.1);
 }
 
 .mml-title-movieItem{
