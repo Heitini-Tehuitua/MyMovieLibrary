@@ -7,6 +7,39 @@ import Trailer from './Trailer'
 import Chargement from './Chargement'
 
 function MovieDetails() {
+
+  function time_convert(num)
+  { 
+    var hours = Math.floor(num / 60);  
+    var minutes = num % 60;
+    return hours + "h" + minutes + "min";         
+  }
+
+  function formGenre(type){
+      switch (type) {
+        case "fantasy": return (
+          "Fantasy"
+        )
+        case "drama": return (
+          "Drama"
+        )
+        case "crime": return (
+          "Crime"
+        )
+        case "adventure": return (
+          "Adventure"
+        )
+        case "action": return (
+          "Action"
+        )
+        case "romance": return (
+          "Romance"
+        )
+        default: return (
+            null
+        )
+      }
+  }
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isLoaded2, setIsLoaded2] = useState(false);
@@ -77,13 +110,13 @@ function MovieDetails() {
                   {movie.title} ({movie.releaseDate})
                 </span>
                 <span className="mml-movieDetails-link" key={`${movie.id}`}>
-                  {`Duration : ${movie.duration}min`}
+                  {`Duration : ${time_convert(movie.duration)}`}
                   <p>Genres : 
                     {movie.genre && movie.genre.length > 1? (
                         movie.genre && movie.genre.map(genre => 
-                            " | " + genre.toUpperCase()
+                            " | " + formGenre(`${genre}`)
                         )
-                      ) : " "+ movie.genre}
+                      ) : " "+ formGenre(`${movie.genre}`)}
                     </p>
                   </span>
                     

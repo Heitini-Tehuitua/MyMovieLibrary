@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import {useLocation} from "react-router-dom";
 import '../styles/ActorDetails.css'
 import Chargement from './Chargement'
+import moment from "moment";
 
 function ActorDetails() {
   const [error, setError] = useState(null);
@@ -41,7 +42,8 @@ function ActorDetails() {
           </div>
       )
     } else {
-        console.log("Actor :" , actor)
+        const birthDate = new Date(actor.birthDate);
+        console.log("Date :" , birthDate)
       return (
         <div >
           <div className="mml-actorDetails-row-container">
@@ -50,7 +52,7 @@ function ActorDetails() {
               <span className="mml-actorDetails-link-title">
                 {`${actor.firstname} ${actor.lastname}`} 
               </span>
-              <p>Born : {actor.birthDate}</p>
+              <p>Born : {moment(actor.birthDate, "YYYYMMDD").format('LL')}.</p>
               <p>Biography: {actor.biography}</p>
             </div>
           </div>
