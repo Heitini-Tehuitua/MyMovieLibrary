@@ -82,7 +82,23 @@ function MovieDetails({data}) {
             <span className="mml-movieDetails-link-synopsis"><p>{currentMovie.synopsis}</p></span>
           </div>
 
-          <h2>List of Actors</h2>
+          <h2>Directed By</h2>
+          <div className="mml-movieDetails-row-item">
+            {peoples.map(people =>(
+                (people._id === currentMovie.directors[0].id)?(
+                <Link to={`/actorDetails?id=${people._id}`} key={`${people._id}-directorID`}>
+                  <div key={people._id} className="mml-movieDetails-container-badge">
+                      <div >
+                          <img className="mml-movieDetails-item-cover" src={people.picture} alt={`${people.lastname}  ${people.lastname} cover`} />
+                      </div>
+                      <span>{people.firstname} {people.lastname}</span>
+                  </div>
+                </Link>):null
+              ))
+            }
+          </div>
+
+          <h2>Actors</h2>
           
           <div className="mml-movieDetails-row-item">
             {currentMovie.actors.map(actorM =>
