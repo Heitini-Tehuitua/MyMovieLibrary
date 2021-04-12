@@ -51,16 +51,14 @@ function GetData(){
             </div>
         )
     }else{
-        const data = [movies,peoples];
+      const data = [movies,peoples];
 
-        console.log("tab Data", data)
-        return(
-          <Banner  
-            data = {data}
-          />
-        )
-    }
+      return(
+        <Banner  
+          data = {data}
+        />
+      )
+   }
 }
 
 export default GetData;
-    

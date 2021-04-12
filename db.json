@@ -8,7 +8,7 @@
 		"duration" : 120,
 		"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg",
 		"trailerLink" : "https://www.youtube.com/watch?v=EcZIzpvRTlU",
-		"directors" : [ {"id" : "1", "name" : "Jon Favreau"} ],
+		"directors" : [ {"id" : "1"} ],
 		"writers" : [ { "id" : "1","role" : "screenplay" },{ "id" : "3","role" : "characters" }],
 		"actors" : [ { "id" : "1", "role" : "Hogan" }, { "id" : "2", "role" : "Tony Stark" }]
 	},
@@ -34,7 +34,7 @@
 		"duration" : 194,
 		"posterLink" : "https://www.wonderingblog.in/wp-content/uploads/2020/09/Titanic_1-698x1024.jpg",
 		"trailerLink" : "https://youtu.be/jUm88F3MEbQ",
-		"directors" : [ {"id" : "1"} ],
+		"directors" : [ {"id" : "10"} ],
 		"writers" : [ { "id" : "1","role" : "written by" }],
 		"actors" : [ { "id" :"5", "role" : "Jack Dawson" }, { "id" : "6", "role" : "Rose Dewitt Bukater" }]
 	},
@@ -47,7 +47,7 @@
 		"duration" : 175,
 		"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_.jpg",
 		"trailerLink" : "https://youtu.be/WDkg3h8PCVU",
-		"directors" : [ {"id" : "1"} ],
+		"directors" : [ {"id" : "8"} ],
 		"writers" : [{"id" : "1", "role" : "screenplay"}, {"id" : "1", "role" : "story"} ],
 		"actors" : [ {"id" : "7", "role" : "Aquaman"} ,{"id" : "8", "role" : "Mera"}]
 	},
@@ -60,7 +60,7 @@
 		"duration" : 151,
 		"posterLink" : "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
 		"trailerLink" : "https://youtu.be/JOddp-nlNvQ",
-		"directors" : [ {"id" : "1"} ],
+		"directors" : [ {"id" : "4"} ],
 		"writers" : [{"id" : "1", "role" : "screenplay"}, {"id" : "1", "role" : "story"} ],
 		"actors" : [ {"id" : "9", "role" : "Thor"} ,{"id" : "10", "role" : "Jane Foster"}]
 	}

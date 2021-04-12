@@ -1,24 +1,34 @@
 import './../styles/App.css';
 import '../styles/Layout.css';
 import GetData from './GetData';
+import Login from './Login';
+import {useState} from "react";
+import logo from '../assets/myflix.png';
 
 function App() {
-
-  return (
+  
+  const [verifUser, setVerifUser] = useState(false)
+  console.log("User : ", verifUser)
+  return verifUser?(
     <div className="App">
       <GetData />
+    </div>
+  ) : (
+    <div className="mml-app-login">
+       <img src = {logo} alt='My Movie Library' className = "mml-app-logo" />
+      <Login setVerifUser = {setVerifUser} />
     </div>
   )
 }
 
 // function App() {
 
-//   const [titleFilm, UpdateTitle] = useState([])
-//   const [activeCategory, setActiveCategory] = useState("")
-//   const [activeLogin, setActiveLogin] = useState("")
-//   const [activePassword, setActivePassword] = useState("")
-//   const [verifUser, setVerifUser] = useState(false)
-//   const [ isShow, setShow] = useState(false)
+  // const [titleFilm, UpdateTitle] = useState([])
+  // const [activeCategory, setActiveCategory] = useState("")
+  // const [activeLogin, setActiveLogin] = useState("")
+  // const [activePassword, setActivePassword] = useState("")
+  // const [verifUser, setVerifUser] = useState(false)
+  // const [ isShow, setShow] = useState(false)
 
 //   return verifUser ?(
 //     <div>
