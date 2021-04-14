@@ -40,8 +40,8 @@ function GetData(){
         }
       )
         console.log("Fetching movies OK !");
-    }, [])
-    
+    }, []);
+
     if (error || error2) {
         return <div>Erreur : {error.message}</div>;
     } else if (!isLoaded || !isLoaded2) {
@@ -50,7 +50,7 @@ function GetData(){
                 <Chargement />
             </div>
         )
-    }else{
+    } else {
       const data = [movies,peoples];
 
       return(
@@ -62,3 +62,29 @@ function GetData(){
 }
 
 export default GetData;
+
+
+// let movie = { "title" : "Ironman", "actors " : [ 1 , 2, 3] };
+
+// movie.actor > Index
+//   getActor(1)
+// ac
+
+// movies.filter(x => x.title === "Iron Man");
+// Fonctions :
+//   getActor(id)
+//   getMovie(id)
+//   ...
+
+// getActor(actorId) {
+//   for (key in jsonFile.actors) {
+//     if (jsonFile.actors.hasOwnProperty(actorId)) {
+//         console.log("Acteur : " + jsonFile.actors[key]._id + " | Name : " + jsonFile.actors[key].lastname);
+//         return jsonFile.actors[key];
+//     }
+//   }
+//   */
+
+//   return jsonFile.actors.
+//   //return db.find({"_id" : actorId});
+// }
