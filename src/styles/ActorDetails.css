@@ -17,6 +17,37 @@
     height: 500px;
 }
 
+.mml-up-del{
+    display: flex;
+    padding: 30px;
+    width: 500px;
+    justify-content: space-around;
+}
+
+.mml-button-up-del{
+    width:200px;
+    text-align: center;
+    height:50px;
+    border:2px solid black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: rgb(40, 38, 43);
+    box-shadow: 5px 10px 5px black;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+.mml-button-up-del:hover{
+    opacity: 1;
+    background-color: rgb(61, 49, 49);
+}
 .mml-loading-container{
     display: flex;
     justify-content: center;

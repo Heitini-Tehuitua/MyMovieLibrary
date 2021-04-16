@@ -3,7 +3,6 @@ import {useState, useEffect} from "react";
 import '../styles/Login.css';
 import Chargement from './Chargement'
 import {Link, Redirect} from "react-router-dom";
-import Home from './Home';
 import logo from '../assets/myflix.png';
 
 function Login() {

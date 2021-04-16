@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/FormMovie.css';
+import '../styles/FormPeople.css';
 import {useState, useRef} from "react";
 import { Redirect } from 'react-router';
+import moment from 'moment';
 
 function FormPeopleInsert() {
     const [isOK, setOK] = useState(false)
@@ -20,7 +21,7 @@ function FormPeopleInsert() {
                 'lastname' : lastname.value,
                 'firstname' : firstname.value,
                 'biography' : biography.value,
-                'birthDate' : birthDate.value,
+                'birthDate' : moment(birthDate.value, "YYYY-MM-DD").format('YYYYMMDD'),
                 'deathDate' : deathDate.value,
                 'picture' : picture.value,
             })
@@ -32,48 +33,55 @@ function FormPeopleInsert() {
             })
         setOK(true)
     }
+
+    function Cancel(){
+        setOK(true)
+    }
     
     return !isOK?(
-        <div>
-            <p className="mml-signIn">Insert People</p>
-            <form className="mml-login-form">
-                <label className="mml-login-label">Lastname</label>
+        <div className="mml-updateForm">
+            <p className="mml-header">Insert People</p>
+            <form className="mml-people-form">
+                <label className="mml-people-label">Lastname</label>
                 <input 
                     type="text" 
-                    className="mml-login-champs"
+                    className="mml-people-champs"
                     ref={value => lastname = value}
                 />
-                <label className="mml-login-label">Firstname</label>
+                <label className="mml-people-label">Firstname</label>
                 <input 
                     type="text" 
-                    className="mml-login-champs"
+                    className="mml-people-champs"
                     ref={value => firstname = value}
                 />
-                <label className="mml-login-label">Biography</label>
+                <label className="mml-people-label">Biography</label>
                 <textarea 
-                    className="mml-login-champs"
+                    className="mml-people-champs"
                     ref={value => biography = value}
                 />
-                <label className="mml-login-label">BirthDate</label>
+                <label className="mml-people-label">BirthDate</label>
                 <input 
-                    className="mml-login-champs"
+                    className="mml-people-champs"
                     type="date"
                     ref={value => birthDate = value}
                 />
-                <label className="mml-login-label">Deathdate</label>
+                <label className="mml-people-label">Deathdate</label>
                 <input 
-                    className="mml-login-champs"
+                    className="mml-people-champs"
                     type="text"
                     ref={value => deathDate = value}
                 />
-                <label className="mml-login-label" >PictureLink</label>
+                <label className="mml-people-label" >PictureLink</label>
                 <input 
-                    className="mml-login-champs"
+                    className="mml-people-champs"
                     type="url"
                     ref={value => picture = value}
                 />
             </form>
-                <button className="mml-login-submit" onClick={PostInsert}>ADD</button>
+            <div className="mml-up-can">
+                <button className="mml-people-submit" onClick={PostInsert}>Add</button>
+                <button className="mml-people-submit" onClick={Cancel}>Cancel</button>
+            </div>
         </div>
         ) : <Redirect to="/actors" />
     

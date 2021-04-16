@@ -1,0 +1,83 @@
+.mml-people{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:650px;
+    height:550px;
+    background-color: rgb(56, 48, 48);
+    border: 2px solid black;
+    box-shadow: 5px 10px 5px black;
+    opacity: 0.95;
+    transition: all 0.5s;
+}
+
+.mml-people-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: blueviolet; */
+}
+
+.mml-people-champs{
+    width:400px;
+    height:50px;
+    color: white;
+    text-align: center;
+    box-shadow: 5px 10px 5px black;
+    margin: 10px;
+    background-color: rgb(27, 26, 26);
+    border:1px solid black;
+}
+
+.mml-people-champs:focus{
+    outline: 3px solid rgb(92, 56, 177);
+}
+
+.mml-people-label{
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.mml-header{
+    color:white;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.mml-loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
+
+.mml-updateForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+.mml-people-submit{
+    margin-top: 30px;
+    width:250px;
+    height:50px;
+    border:2px solid black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: rgb(92, 56, 177);
+    box-shadow: 5px 10px 5px black;
+}
+
+.mml-up-can{
+    display: flex;
+    padding: 30px;
+    width: 600px;
+    justify-content: space-around;
+}

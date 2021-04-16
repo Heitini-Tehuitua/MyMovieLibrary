@@ -10,7 +10,7 @@ function ActorDetails() {
   const [currentActor, setActor] = useState([])
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false); 
- 
+  
   useEffect(() => {
     let actorID = query.get("id");
     fetch(process.env.REACT_APP_SERVER_API + `/peopleDetails?id=${actorID}`)
@@ -38,11 +38,11 @@ function ActorDetails() {
   if (error) {
     return <div>Erreur : {error}</div>;
   } else if (!isLoaded) {
-      return(
-          <div className="mml-loading-container">
-              <Chargement />
-          </div>
-      )
+    return(
+        <div className="mml-loading-container">
+            <Chargement />
+        </div>
+    )
   } else {
     return (
       <div >
@@ -57,12 +57,14 @@ function ActorDetails() {
           </div>
         </div>
 
-        <Link to={`/formPeople?id=${currentActor._id}`}>
-          <p>Update</p>
-        </Link>
-        <Link to={`/deletePeople?id=${currentActor._id}`}>
-          <p>Delete</p>
-        </Link>
+        <div className="mml-up-del">
+          <Link to={`/formPeople?id=${currentActor._id}`}>
+            <p className="mml-button-up-del">Update</p>
+          </Link>
+          <Link to={`/deletePeople?id=${currentActor._id}`}>
+            <p className="mml-button-up-del">Delete</p>
+          </Link>
+        </div>
       </div>
     )
   }
