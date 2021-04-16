@@ -51,12 +51,8 @@ function GetData(){
             </div>
         )
     } else {
-      const data = [movies,peoples];
-
       return(
-        <Banner  
-          data = {data}
-        />
+        <Banner />
       )
    }
 }

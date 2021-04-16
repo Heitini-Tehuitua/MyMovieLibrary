@@ -16,6 +16,14 @@
     width: 300px;
     height: 500px;
 }
+
+.mml-loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
+
 .mml-actorDetails-container{
     display: flex;
     flex-direction: column;

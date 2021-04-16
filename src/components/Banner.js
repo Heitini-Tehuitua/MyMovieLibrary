@@ -1,66 +1,36 @@
 import './../styles/Banner.css';
 import logo from '../assets/myflix.png';
-import FilmList from './FilmList';
-import ActorsList from './ActorsList';
-import ActorDetails from './ActorDetails';
-import MovieDetails from './MovieDetails';
-import Home from './Home'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router,Switch,Link,Route} from "react-router-dom";
 
-function Banner({data}){
+function Banner(){
     return(
-        <Router>
-            <div>
-                <nav >
-                    <ul className="mml-banner">
-                        <li key="mml-logo-picture"className="mml-banner-link-choice">
-                            <img src = {logo} alt='My Movie Library' className = "mml-logo" />
-                        </li>
-                        <li  key="mml-accueil-link" className="mml-banner-link-choice">
-                            <Link to="/">Accueil</Link>
-                        </li>
-                        <li  key="mml-movies-link" className="mml-banner-link-choice">
-                            <Link to="/movies">Films</Link>
-                        </li>
-                        <li key="mml-actors-link" className="mml-banner-link-choice">
-                            <Link to="/actors">Acteurs</Link>
-                        </li>
-                        <li key="mml-writers-link" className="mml-banner-link-choice">
-                            <Link to="/writers">Scénaristes</Link>
-                        </li>
-                    </ul>
-                </nav>
+        <div>
+            <nav >
+                <ul className="mml-banner">
+                    <li key="mml-logo-picture"className="mml-banner-link-choice">
+                        <img src = {logo} alt='My Movie Library' className = "mml-logo" />
+                    </li>
+                    <li  key="mml-accueil-link" className="mml-banner-link-choice">
+                        <Link to="/home">Accueil</Link>
+                    </li>
+                    <li  key="mml-movies-link" className="mml-banner-link-choice">
+                        <Link to="/movies">Films</Link>
+                    </li>
+                    <li key="mml-actors-link" className="mml-banner-link-choice">
+                        <Link to="/actors">Acteurs</Link>
+                    </li>
+                    <li key="mml-writers-link" className="mml-banner-link-choice">
+                        <Link to="/writers">Scénaristes</Link>
+                    </li>
+                </ul>
+            </nav>
 
-                {/* A <Switch> looks through its children <Route>s and
-                    renders the first one that matches the current URL. */}
-                <Switch>
-                    <Route path="/movies">
-                        <FilmList data = {data}/>
-                    </Route>
-
-                    <Route path="/movieDetails">
-                        <MovieDetails data ={data} />
-                    </Route>
-                    <Route path="/actors">
-                        <ActorsList data = {data}/>
-                    </Route>
-                    <Route path="/actorDetails">
-                        <ActorDetails data = {data}/>
-                    </Route>
-                    {/* <Route path="/writers">
-                        <WritersList />
-                    </Route>
-                    <Route path="/writerDetails">
-                        <WriterDetails />
-                    </Route> */}
-                    <Route path="/">
-                        <Home data={data}/>
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
+            {/* A <Switch> looks through its children <Route>s and
+                renders the first one that matches the current URL. */}
+        </div>
     )
 }
 

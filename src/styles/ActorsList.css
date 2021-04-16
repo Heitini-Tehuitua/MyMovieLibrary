@@ -24,6 +24,13 @@
 	flex-wrap: wrap;
 }
 
+.mml-loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
+
 .mml-container-badge{
     border: 2px solid black;
 	display: flex;

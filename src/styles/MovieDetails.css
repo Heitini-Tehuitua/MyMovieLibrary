@@ -10,7 +10,12 @@
     height: 500px;
     border-radius: 20px;
 }
-
+.mml-loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
 .mml-detailMovie-container{
     display: flex;
     flex-direction: row;

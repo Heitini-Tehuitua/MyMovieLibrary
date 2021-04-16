@@ -1,22 +1,57 @@
 import {Link, useLocation} from "react-router-dom";
 import '../styles/MovieDetails.css'
 import Trailer from './Trailer'
+import {useState, useEffect } from "react";
+import Chargement from "./Chargement";
 
-function MovieDetails({data}) {
+function MovieDetails() {
   var query = new URLSearchParams(useLocation().search);
-  var currentMovie;
-  let movieID = query.get("id");
+  const [currentMovie, setMovie] = useState([])
+  const [peoples, setPeoples] = useState([])
+  const [error, setError] = useState(null);
+  const [error2, setError2] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false); 
+  const [isLoaded2, setIsLoaded2] = useState(false); 
 
-  const movies = data[0];
-  const peoples = data[1];
-  
-  movies.map(movie =>
-    {if(movie._id === movieID){  
-      return currentMovie = movie;
-    }else{
-      return null;
-    }
-  });
+    // Fetching data
+  useEffect(() => {
+      let movieID = query.get("id");
+
+      fetch(process.env.REACT_APP_SERVER_API + "/movieDetails?id=" + movieID)
+      .then(res => res.json())
+      .then(
+          (result) => {
+              if(result.error){
+                setError(result.error);
+                console.log(result.error)
+              } else {
+
+                console.log("Result : ", result);
+                setMovie(result)
+                setIsLoaded(true);
+                console.log("MovieD Result :" + result[0])
+              }
+          },
+          (error) => {
+              setError(error);
+              setIsLoaded(true);
+          }
+      )
+
+  fetch(process.env.REACT_APP_SERVER_API + `/peoples`)
+    .then(res => res.json())
+    .then(
+      (result) => {
+        setPeoples(result);
+        setIsLoaded2(true);
+      },
+      (error) => {
+        setError2(error);
+        setIsLoaded2(true);
+      }
+    )
+      console.log("Fetching movies OK !");
+  }, [])
   
   function time_convert(num)
   { 
@@ -50,6 +85,15 @@ function MovieDetails({data}) {
         )
       }
   }
+  if (error || error2) {
+    return <div>Erreur : {error}</div>;
+  } else if (!isLoaded || !isLoaded2) {
+      return(
+          <div className="mml-loading-container">
+              <Chargement />
+          </div>
+      )
+  } else {
   return (
     <div >
         <div>
@@ -81,6 +125,10 @@ function MovieDetails({data}) {
                 
             <span className="mml-movieDetails-link-synopsis"><p>{currentMovie.synopsis}</p></span>
           </div>
+
+          <Link to={`/formMovie?id=${currentMovie._id}`}>
+            <p>Update Movie</p>
+          </Link>
 
           <h2>Directed By</h2>
           <div className="mml-movieDetails-row-item">
@@ -119,7 +167,7 @@ function MovieDetails({data}) {
           </div>
         </div> 
     </div>
-  );
+  )}
 }
 
 export default MovieDetails;

@@ -1,9 +1,41 @@
 import FilmItem from './FilmItem'
 import DisplayCover from './DisplayCover'
 import '../styles/FilmList.css'
+import {useState, useEffect } from "react";
+import Chargement from './Chargement'
 
-function FilmList({data}) {
-    const movies = data[0];
+function FilmList() {
+
+    const [movies, setMovies] = useState([])
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false); 
+
+    useEffect(() => {
+        fetch(process.env.REACT_APP_SERVER_API + "/movies")
+        .then(res => res.json())
+        .then(
+            (result) => {
+                console.log("Result : ", result);
+                setMovies(result)
+                setIsLoaded(true);
+            },
+            (error) => {
+                setError(error);
+                setIsLoaded(true);
+            }
+        )
+        console.log("Fetching movies OK !");
+    }, []);
+    
+    if (error) {
+        return <div>Erreur : {error.message}</div>;
+    } else if (!isLoaded) {
+        return(
+            <div className="mml-loading-container">
+                <Chargement />
+            </div>
+        )
+    } else {
     return (
         <div className="mml-moviesList-container">
             <div id="movies">
@@ -22,7 +54,8 @@ function FilmList({data}) {
                 }
             </div>
         </div>
-    )
+      )
+    }
 
 }
 
