@@ -46,6 +46,7 @@ function FormMovie() {
     }, [])
 
     function PostUpdate(){
+        console.log("Genres : " + currentMovie.genre)
         const requestOptions = {
             method : 'POST',
             headers : { 'Content-Type' : 'application/x-www-form-urlencoded' },

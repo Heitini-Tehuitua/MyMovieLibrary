@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/FormPeople.css';
 import {useState, useRef} from "react";
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import moment from 'moment';
 
 function FormPeopleInsert() {

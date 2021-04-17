@@ -59,7 +59,7 @@ function FormPeople() {
                 'firstname' : firstname.value,
                 'biography' : biography.value,
                 'birthDate' : moment(birthdate.value, "YYYY-MM-DD").format('YYYYMMDD'),
-                'deathDate' : deathdate.genre,
+                'deathDate' : deathdate.value,
                 'picture' : picture.value,
             })
         }
